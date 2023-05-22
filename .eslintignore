@@ -1,0 +1,8 @@
+/index.html
+/lambda/
+/scripts
+/config
+/plugins
+.history
+/tsconfig.json
+/src/vite-env.d.ts

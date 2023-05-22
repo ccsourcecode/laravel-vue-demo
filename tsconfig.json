@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    // 指定ECMAScript目標版本
+    "target": "esnext",
+    "useDefineForClassFields": true,
+         // 指定生成哪個模組系統程式碼
+    "module": "esnext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    /* node mode */
+    // 決定如何處理模組。
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+
+    /* Linting */
+     // 啟用所有嚴格類型檢查選項。
+     // 啟用 --strict相當於啟用 --noImplicitAny, --noImplicitThis, --alwaysStrict，
+     // --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization。
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+     // 允許從沒有設定默認匯出的模組中默認匯入。這並不影響程式碼的輸出，僅為了類型檢查。
+     "allowSyntheticDefaultImports": true,
+
+     // 解析非相對模組名的基準目錄
+     "baseUrl": ".",
+
+     "esModuleInterop": true,
+
+     // 從 tslib 匯入輔助工具函數（比如 __extends， __rest等）
+     "importHelpers": true,
+
+     // 生成相應的 .map檔案。
+     "sourceMap": true,
+
+     // 忽略所有的聲明檔案（ *.d.ts）的類型檢查。
+     "skipLibCheck": true,
+
+     // 要包含的類型聲明檔案名稱列表
+    "types": [ "node" ],
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","resources/**/*.ts", "resources/**/*.d.ts", "resources/**/*.tsx", "resources/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules"]
+}
